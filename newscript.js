@@ -20,59 +20,73 @@ let computerPlay = () => {
 }
   
   let moves = ["rock", "paper", "scissors"];
-  function startRound() {
-    const playerSelection = playerPlay();
-    const computerSelection = computerPlay();
-    const playerWin =  0;
-    const computerWin = 0;
-    function playRound(playerSelection, computerSelection) {
-      if (playerSelection === "rock" && computerSelection === "rock") {
-        return "Tie! You both chose Rock";
-      } else if (playerSelection === "rock" && computerSelection === "paper") {
-          computerWin++;
-        return "You Lose! Paper beats Rock";
-      } else if (playerSelection === "rock" && computerSelection === "scissors") {
-        playerWin++;
-        return "You Win! Rock beats Scissors";
-      } else if (playerSelection === "paper" && computerSelection === "paper") {
-        return "Tie! You both chose Paper";
-      } else if (
-        playerSelection === "paper" &&
-        computerSelection === "scissors"
-      ) {
-        computerWin++;
-        return "You Lose! Scissors beats Paper";
-      } else if (playerSelection === "paper" && computerSelection === "rock") {
-        playerWin++;
-        return "You Win! Paper beats Rock";
-      } else if (
-        playerSelection === "scissors" &&
-        computerSelection === "scissors"
-      ) {
-        return "Tie! You both chose Scissors";
-      } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        computerWin++;
-        return "You Lose! Rock beats Scissors";
-      } else if (
-        playerSelection === "scissors" &&
-        computerSelection === "paper"
-      ) {
-        playerWin++;
-        return "You Win! Scissors beats Paper";
-      } else {
-        return "error";
-      }
-    }
   
-    return playRound(playerSelection, computerSelection);
-  }
   
   function game() {
+  
+    let playerWins = 0;
+    let computerWins = 0;
+    
+
+
+    function startRound() {
+      const playerSelection = playerPlay();
+      const computerSelection = computerPlay();
+      function playRound(playerSelection, computerSelection) {
+        if (
+          playerSelection === "scissors" &&
+          computerSelection === "paper"
+        ) {
+          playerWins++;
+          return "You Win! Scissors beats Paper";
+        } else if (playerSelection === "paper" && computerSelection === "rock") {
+          playerWins++;
+          return "You Win! Paper beats Rock";
+        } else if (playerSelection === "rock" && computerSelection === "scissors") {
+          playerWins++;
+          return "You Win! Rock beats Scissors";
+        } else if (playerSelection === "rock" && computerSelection === "paper") {
+          computerWins++;
+          return "You Lose! Paper beats Rock";
+        } else if (
+          playerSelection === "paper" &&
+          computerSelection === "scissors"
+        ) {
+          computerWins++;
+          return "You Lose! Scissors beats Paper";
+        } else if (playerSelection === "scissors" && computerSelection === "rock") {
+          computerWins++;
+          return "You Lose! Rock beats Scissors";
+        } else if (playerSelection === "rock" && computerSelection === "rock") {
+          return "Tie! You both chose Rock";
+        } else if (playerSelection === "paper" && computerSelection === "paper") {
+          return "Tie! You both chose Paper";
+        } else if (
+          playerSelection === "scissors" &&
+          computerSelection === "scissors"
+        ) {
+          return "Tie! You both chose Scissors";
+        } else {
+          return 'error';
+        }
+      }
+    
+      return playRound(playerSelection, computerSelection);
+    }
     for(let rounds = 0;rounds <= 5; rounds++) {
-   
+
+      console.log('The computer has won ' + computerWins + ' games.');
+      console.log('You have won ' + playerWins + ' games.');
+
       console.log(startRound());
+      if (rounds === 5 && playerWins > computerWins) {
+        return console.log('Victory You have won ' + playerWins + ' games whilst the computer won ' + computerWins +' games.');
+      } else if (rounds === 5 && playerWins < computerWins) {
+        return console.log('Defeat You have won ' + playerWins + ' games but the computer won ' + computerWins +' games.');
+      } else if (rounds === 5 && playerWins < computerWins) {
+        return console.log('Tie You both won ' + playerWins + ' games.');
+      }
     }
   }
 game();
 
-  
