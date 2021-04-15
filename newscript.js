@@ -1,4 +1,7 @@
 
+
+
+let moves = ["rock", "paper", "scissors"];
 /*a function that generates a random number between one and three then asigns it to a corrisponding array to a variable the return the varible */
 let computerPlay = () => {
   let computersChoise = getRandomInt(3);
@@ -15,93 +18,115 @@ let computerPlay = () => {
     return moves[2];
   }
 };
-/*a function that propmts the player to enter rock paper or scissors then assings the output to a var then returns it in a lower case form */
-function playerPlay() {
-  fix = prompt("Rock, Paper or Scissors?", "Paper");
-  choise = fix.toLowerCase();
-  return choise;
+
+
+
+let playerWins = 0;
+function win() {
+  playerWinDiv.textContent = `player wins ${playerWins}`
+  playerWins++;
+  announceWinner();
 }
 
-let moves = ["rock", "paper", "scissors"];
+let computerWins = 0;
+function lose() {
+  computerWinDiv.textContent = `computer wins ${computerWins}`
+  computerWins++;
+  announceWinner();
+}
+function announceWinner() {
+if (playerWins + computerWins === 5) {
+  if (playerWins < computerWins) {
+    gameScore.textContent = 'you win';
+  } else if (playerWins > computerWins) {
+    gameScore.textContent = 'you lose';
+  }
+}
+}
 
-function game() {
-  let playerWins = 0;
-  let computerWins = 0;
-
-  /*a function that takes the players choise and the generated choise and compares them returning a string and incrementing the winners score */
-  function startRound() {
-    const playerSelection = playerPlay();
-    const computerSelection = computerPlay();
     function playRound(playerSelection, computerSelection) {
+    
+      console.log(computerSelection);
+      console.log(playerSelection);
       if (playerSelection === "scissors" && computerSelection === "paper") {
-        playerWins++;
-        return "You Win! Scissors beats Paper";
+        win()
+        content.textContent = "You Win! Scissors beats Paper";
       } else if (playerSelection === "paper" && computerSelection === "rock") {
-        playerWins++;
-        return "You Win! Paper beats Rock";
+        win();
+        content.textContent = "You Win! Paper beats Rock";
       } else if (
         playerSelection === "rock" &&
         computerSelection === "scissors"
       ) {
-        playerWins++;
-        return "You Win! Rock beats Scissors";
+        win();
+        content.textContent = "You Win! Rock beats Scissors";
       } else if (playerSelection === "rock" && computerSelection === "paper") {
-        computerWins++;
-        return "You Lose! Paper beats Rock";
+        lose();
+        content.textContent ="You Lose! Paper beats Rock";
       } else if (
         playerSelection === "paper" &&
         computerSelection === "scissors"
       ) {
-        computerWins++;
-        return "You Lose! Scissors beats Paper";
+        lose();
+        content.textContent = "You Lose! Scissors beats Paper";
       } else if (
         playerSelection === "scissors" &&
         computerSelection === "rock"
       ) {
-        computerWins++;
-        return "You Lose! Rock beats Scissors";
+        lose();
+        content.textContent = "You Lose! Rock beats Scissors";
       } else if (playerSelection === "rock" && computerSelection === "rock") {
-        return "Tie! You both chose Rock";
+        content.textContent = "Tie! You both chose Rock";
       } else if (playerSelection === "paper" && computerSelection === "paper") {
-        return "Tie! You both chose Paper";
+
+        content.textContent = "Tie! You both chose Paper";
       } else if (
         playerSelection === "scissors" &&
         computerSelection === "scissors"
       ) {
-        return "Tie! You both chose Scissors";
+        content.textContent = "Tie! You both chose Scissors";
       } else {
-        return "error";
+        content.textContent = "error";
       }
     }
+   
+        const score = document.querySelector('#score-div');
 
-    return playRound(playerSelection, computerSelection);
-  }
+        const gameScore = document.createElement('div');
+        gameScore.classList.add('gameScore');
+        gameScore.textContent = '';
+        score.appendChild(gameScore);
+    
+    
+        const computerWinDiv = document.createElement('div');
+        computerWinDiv.classList.add('computerWinDiv');
+        computerWinDiv.textContent = `computer wins ${computerWins}`;
+        score.appendChild(computerWinDiv);
+    
+        const playerWinDiv = document.createElement('div');
+        playerWinDiv.classList.add('playerWinDiv');
+        playerWinDiv.textContent = `player wins ${playerWins}`;
+        score.appendChild(playerWinDiv);
+    
+        
+    
+    
+        const container = document.querySelector('#result-div');
+        const content = document.createElement('div');
+        content.classList.add('content');
+        content.textContent = '';
+        container.appendChild(content);
+    
+    
 
-  /* a loop thar plays the round function five times and returns the scores*/
-  for (let rounds = 0; rounds <= 5; rounds++) {
-    console.log("The computer has won " + computerWins + " games.");
-    console.log("You have won " + playerWins + " games.");
-
-    console.log(startRound());
-    if (rounds === 5 && playerWins > computerWins) {
-      return console.log(
-        "Victory You have won " +
-          playerWins +
-          " games whilst the computer won " +
-          computerWins +
-          " games."
-      );
-    } else if (rounds === 5 && playerWins < computerWins) {
-      return console.log(
-        "Defeat You have won " +
-          playerWins +
-          " games but the computer won " +
-          computerWins +
-          " games."
-      );
-    } else if (rounds === 5 && playerWins < computerWins) {
-      return console.log("Tie You both won " + playerWins + " games.");
-    }
-  }
-}
-game();
+// buttons is a node list. It looks and acts much like an array.
+const buttons = document.querySelectorAll('button');
+  // we use the .forEach method to iterate through each button
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener('click', () => {
+    const computerSelection = computerPlay();
+    const playerSelection = button.id;
+    console.log(playRound(playerSelection, computerSelection));
+  });
+});
