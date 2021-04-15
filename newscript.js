@@ -1,6 +1,3 @@
-
-
-
 let moves = ["rock", "paper", "scissors"];
 /*a function that generates a random number between one and three then asigns it to a corrisponding array to a variable the return the varible */
 let computerPlay = () => {
@@ -18,27 +15,39 @@ let computerPlay = () => {
     return moves[2];
   }
 };
+function resetFunction() {
+
+}
 
 
+let finsihedRounds = 0;
+function roundOver() {
+  console.log(finsihedRounds,'finsihedRounds')
+  finsihedRounds++;
+}
 
 let playerWins = 0;
 function win() {
-  playerWinDiv.textContent = `player wins ${playerWins}`
   playerWins++;
+  playerWinDiv.textContent = `The player has one ${playerWins} rounds.`
+  console.log(playerWins, 'Player wins')
   announceWinner();
+  roundOver();
 }
 
 let computerWins = 0;
 function lose() {
-  computerWinDiv.textContent = `computer wins ${computerWins}`
   computerWins++;
+  computerWinDiv.textContent = `The computer has one ${computerWins} rounds.`
+  console.log(computerWins, 'Computer Wins')
+  roundOver();
   announceWinner();
 }
 function announceWinner() {
-if (playerWins + computerWins === 5) {
-  if (playerWins < computerWins) {
+if (playerWins === 5 ||  computerWins === 5) {
+  if (playerWins > computerWins) {
     gameScore.textContent = 'you win';
-  } else if (playerWins > computerWins) {
+  } else if (playerWins < computerWins) {
     gameScore.textContent = 'you lose';
   }
 }
@@ -96,16 +105,17 @@ if (playerWins + computerWins === 5) {
         gameScore.classList.add('gameScore');
         gameScore.textContent = '';
         score.appendChild(gameScore);
-    
+        
+
     
         const computerWinDiv = document.createElement('div');
         computerWinDiv.classList.add('computerWinDiv');
-        computerWinDiv.textContent = `computer wins ${computerWins}`;
+        computerWinDiv.textContent = `The computer has one ${computerWins} rounds.`;
         score.appendChild(computerWinDiv);
     
         const playerWinDiv = document.createElement('div');
         playerWinDiv.classList.add('playerWinDiv');
-        playerWinDiv.textContent = `player wins ${playerWins}`;
+        playerWinDiv.textContent = `The player has one ${playerWins} rounds.`;
         score.appendChild(playerWinDiv);
     
         
@@ -116,6 +126,10 @@ if (playerWins + computerWins === 5) {
         content.classList.add('content');
         content.textContent = '';
         container.appendChild(content);
+
+     
+
+ 
     
     
 

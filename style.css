@@ -1,0 +1,69 @@
+#header {
+    display: flex;
+    justify-content: center;
+    border: 20px solid green;
+    padding: 10px;
+    background-color: yellow;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: purple;
+}
+.gameScore {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: pink;
+}
+
+#score-div {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: bisque;
+}
+
+.playerWinDiv {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: red;
+}
+.computerWinDiv {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: blue;
+}
+#container {
+    display: flex;
+    justify-content: center;
+    border: 20px solid pink;
+    padding: 10px;
+    background-color: orange;
+}
+#rock{
+    border: 10px solid black;
+    padding: 10px;
+    background-color: red;
+}
+#paper {
+    border: 10px solid black;
+    padding: 10px;
+    background-color: red;
+}
+#scissors {
+    border: 10px solid black;
+    padding: 10px;
+    background-color: red;
+}
+#replay-div {
+    display: flex;
+    justify-content: center;
+    border: 20px solid pink;
+    padding: 10px;
+    background-color: blue;
+}
