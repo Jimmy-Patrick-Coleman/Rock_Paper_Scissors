@@ -1,9 +1,9 @@
 #header {
     display: flex;
     justify-content: center;
-    border: 20px solid green;
+    border: 20px solid dodgerblue;
     padding: 10px;
-    background-color: yellow;
+    background-color: orange;
 }
 .content {
     display: flex;
@@ -31,12 +31,17 @@
 .playerWinDiv {
     border: 1px solid black;
     padding: 10px;
-    background-color: red;
+    background-color: green;
 }
 .computerWinDiv {
     border: 1px solid black;
-    padding: 10px;
+    padding:10px;
     background-color: blue;
+}
+.roundsDiv{
+    border: 1px solid black;
+    padding:10px;
+    background-color: white;
 }
 #container {
     display: flex;
@@ -45,21 +50,7 @@
     padding: 10px;
     background-color: orange;
 }
-#rock{
-    border: 10px solid black;
-    padding: 10px;
-    background-color: red;
-}
-#paper {
-    border: 10px solid black;
-    padding: 10px;
-    background-color: red;
-}
-#scissors {
-    border: 10px solid black;
-    padding: 10px;
-    background-color: red;
-}
+
 #replay-div {
     display: flex;
     justify-content: center;
@@ -67,3 +58,94 @@
     padding: 10px;
     background-color: blue;
 }
+/* Container needed to position the button. Adjust the width as needed */
+.rock-div {
+    position: relative;
+    width: 50%;
+    padding: 100px;
+  }
+  
+  /* Make the image responsive */
+  #rock-div img {
+    padding: 0px 100px 0px 0px;
+    width: 10em;
+    height: auto;
+  }
+
+  #rock{
+    position: absolute;
+    top: 66%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: gray;
+    color: black;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  #rock:hover {
+    background-color: black;
+    color: white;
+  }
+/* Container needed to position the button. Adjust the width as needed */
+.paper-div {
+    position: relative;
+    width: 50%;
+  }
+  
+  /* Make the image responsive */
+  #paper-div img {
+    padding: 0px 100px 0px 0px;
+    width: 10em;
+    height: auto;
+  }
+
+  #paper{
+    position: absolute;
+    top: 66%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  #paper:hover {
+    background-color: black;
+    color: white;
+  }
+  .scissors-div {
+    position: relative;
+    width: 50%;
+  }
+  /* Make the image responsive */
+  #scissors-div img {
+    padding: 0px 100px 0px 0px;
+    width: 10em;
+    height: auto;
+  }
+
+  #scissors{
+    position: absolute;
+    opacity: 0.3;
+    top: 66%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    padding: 2em 2em 2em 2em;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  #scissors:hover {
+    background-color: black;
+    color: white;
+  }
