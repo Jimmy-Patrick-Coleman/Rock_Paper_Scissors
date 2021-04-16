@@ -4,62 +4,55 @@
     border: 20px solid dodgerblue;
     padding: 10px;
     background-color: orange;
-}
-.content {
+  }
+  .content {
     display: flex;
     justify-content: center;
     border: 1px solid black;
     padding: 10px;
     background-color: purple;
-}
-.gameScore {
+  }
+  .gameScore {
     display: flex;
     justify-content: center;
     border: 1px solid black;
     padding: 10px;
     background-color: pink;
-}
-
-#score-div {
+  }
+  
+  #score-div {
     display: flex;
     justify-content: center;
     border: 1px solid black;
     padding: 10px;
     background-color: bisque;
-}
-
-.playerWinDiv {
+  }
+  
+  .playerWinDiv {
     border: 1px solid black;
     padding: 10px;
     background-color: green;
-}
-.computerWinDiv {
+  }
+  .computerWinDiv {
     border: 1px solid black;
-    padding:10px;
+    padding: 10px;
     background-color: blue;
-}
-.roundsDiv{
+  }
+  .roundsDiv {
     border: 1px solid black;
-    padding:10px;
+    padding: 10px;
     background-color: white;
-}
-#container {
+  }
+  #container {
     display: flex;
     justify-content: center;
     border: 20px solid pink;
     padding: 10px;
     background-color: orange;
-}
-
-#replay-div {
-    display: flex;
-    justify-content: center;
-    border: 20px solid pink;
-    padding: 10px;
-    background-color: blue;
-}
-/* Container needed to position the button. Adjust the width as needed */
-.rock-div {
+  }
+  
+  /* Container needed to position the button. Adjust the width as needed */
+  .rock-div {
     position: relative;
     width: 50%;
     padding: 100px;
@@ -71,8 +64,8 @@
     width: 10em;
     height: auto;
   }
-
-  #rock{
+  
+  #rock {
     position: absolute;
     top: 66%;
     left: 27%;
@@ -89,8 +82,8 @@
     background-color: black;
     color: white;
   }
-/* Container needed to position the button. Adjust the width as needed */
-.paper-div {
+  /* Container needed to position the button. Adjust the width as needed */
+  .paper-div {
     position: relative;
     width: 50%;
   }
@@ -101,8 +94,8 @@
     width: 10em;
     height: auto;
   }
-
-  #paper{
+  
+  #paper {
     position: absolute;
     top: 66%;
     left: 65%;
@@ -130,8 +123,8 @@
     width: 10em;
     height: auto;
   }
-
-  #scissors{
+  
+  #scissors {
     position: absolute;
     opacity: 0.3;
     top: 66%;
