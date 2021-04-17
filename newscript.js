@@ -104,7 +104,7 @@ function playRound(playerSelection, computerSelection) {
 const ending = document.querySelector("#ending");
 const gameScore = document.createElement("div");
 gameScore.classList.add("gameScore");
-gameScore.textContent = "";
+gameScore.textContent = "Play five rounds against the computer.";
 ending.appendChild(gameScore);
 
 const score = document.querySelector("#score-div");
