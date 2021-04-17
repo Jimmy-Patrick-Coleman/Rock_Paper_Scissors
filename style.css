@@ -1,143 +1,146 @@
 #header {
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-    margin: 20px;
-    padding: 10px;
-    background-color: orange;
-  }
-  #body {
-    background-color: dodgerblue;
-  }
-  #main {
-    background-color: dodgerblue;
-  }
-  .content {
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-    padding: 10px;
-    background-color: purple;
-  }
-  .gameScore {
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-    padding: 10px;
-    background-color: pink;
-  }
-  
-  #score-div {
-    display: flex;
-    justify-content: center;
-    border: 1px solid black;
-    padding: 10px;
-    background-color: bisque;
-  }
-  
-  .playerWinDiv {
-    border: 1px solid black;
-    padding: 10px;
-    background-color: green;
-  }
-  .computerWinDiv {
-    border: 1px solid black;
-    padding: 10px;
-    background-color: blue;
-  }
-  .roundsDiv {
-    border: 1px solid black;
-    padding: 10px;
-    background-color: white;
-  }
-  #container {
-    display: flex;
-    justify-content: center;
-    border: 20px solid pink;
-    height: auto;
-    padding: 10px;
-    background-color: orange;
-  }
-  #rock {
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 1em;
-    margin-left: 35px;
-    border: 1px solid black;
-    border-radius: 5px;
-  }
-  #rock-div {
-    display: block;
-    position: relative;
-    width: 50%;
-  }
-  #rock-div img {
-    width: 10em;
-    height: auto;
-    border: 1px solid black;
-  }
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 20px;
+  padding: 10px;
+  background-color: orange;
+}
+#body {
+  background-color: dodgerblue;
+}
+#main {
+  background-color: purple;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: crimson;
+}
+.gameScore {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: crimson;
+}
+
+#score-div {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+
+.playerWinDiv {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: dodgerblue;
+}
+.computerWinDiv {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: crimson;
+}
+.roundsDiv {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: white;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 20px;
+  height: auto;
+  padding: 10px;
+  background-color: white;
+}
+#rock {
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#rock-div {
+  display: block;
+  position: relative;
+  width: 50%;
+  margin-left: 200px;
+}
+#rock-div img {
+  width: 10em;
+  height: auto;
+  border: 1px solid black;
+}
 #rock-button-div {
-  width: 10em;
-    height: auto;
-    border: 1px solid black;
-    background-color: white;
+width: 10em;
+  height: auto;
+  border: 1px solid black;
+  background-color: white;
 }
 
-  #paper {
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 1em;
-    margin-left: 35px;
-    border: 1px solid black;
-    border-radius: 5px;
-  }
-  #paper-div {
-    display: block;
-    position: relative;
-    width: 50%;
-  }
-  #paper-div img {
-    width: 10em;
-    height: auto;
-    border: 1px solid black;
-  }
+#paper {
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#paper-div {
+  display: block;
+  position: relative;
+  width: 50%;
+}
+#paper-div img {
+  width: 10em;
+  height: auto;
+  border: 1px solid black;
+}
 #paper-button-div {
-  width: 10em;
-    height: auto;
-    border: 1px solid black;
-    background-color: white;
+width: 10em;
+  height: auto;
+  border: 1px solid black;
+  background-color: white;
 }
 
 
-  #scissors {
-    background-color: white;
-    color: black;
-    font-size: 16px;
-    padding: 1em;
-    border: 1px solid black;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  #scissors-div {
-    display: block;
-    position: relative;
-    width: 50%;
-  }
-  #scissors-div img {
-    width: 10em;
-    height: auto;
-    border: 5px solid salmon;
-  }
+#scissors {
+  width: 100%;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  padding: 1em;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+#scissors-div {
+  display: block;
+  position: relative;
+  width: 50%;
+}
+#scissors-div img {
+  width: 10em;
+  height: auto;
+  border: 1px solid black;
+}
 #scissors-button-div {
   width: 10em;
-    height: auto;
-    border: 5px solid red;
+  height: auto;
+  border: 1px solid black;
+  background-color: white;
 }
-  #contacts {
-    border: 2px solid black;
-    height: auto;
-    background-color: orange;
-    color: blue;
-  }
+#contacts {
+  border: 2px solid black;
+  height: auto;
+  background-color: orange;
+  color: blue;
+}
